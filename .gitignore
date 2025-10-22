@@ -1,0 +1,9 @@
+# Entorno virtual de Python
+venv/
+
+# Carpeta de la BBDD y archivos de sesión
+instance/
+
+# Archivos de cache de Python
+__pycache__/
+*.pyc

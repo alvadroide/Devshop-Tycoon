@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-R">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevShop Tycoon</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="game-container">
+        
+        <div class="header-bar">
+            <h1>DevShop Tycoon</h1>
+            <button id="reset-button" class="reset-button">Reiniciar Partida</button>
+        </div>
+        
+        <div class="hud">
+            
+            <div class="stat-box">
+                <div class="stat-title">💰 Dinero</div>
+                <div id="money" class="stat-value">$---</div>
+                <div id="passive-income" class="stat-passive">($0 / seg)</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-title">⚡ Energía</div>
+                <div id="energy" class="stat-value">--/--</div>
+                <div class="progress-bar-bg">
+                    <div id="energy-bar" class="progress-bar energy"></div>
+                </div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-title">📈 Nivel</div>
+                <div id="level" class="stat-value">--</div>
+            </div>
+            
+            <div class="stat-box">
+                <div class="stat-title">✨ XP</div>
+                <div id="xp" class="stat-value">--/--</div>
+                <div class="progress-bar-bg">
+                    <div id="xp-bar" class="progress-bar xp"></div>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-title">👨‍💻 Empleados</div>
+                <div id="junior-devs" class="stat-value">0</div>
+            </div>
+
+        </div>
+
+        <div class="panels-container">
+            <div class="panel">
+                <h2>Contratos Disponibles</h2>
+                <div id="contracts-list">
+                    </div>
+            </div>
+            
+            <div class="panel">
+                <h2>Tienda de Mejoras</h2>
+                <div id="store-list">
+                    </div>
+            </div>
+        </div>
+        
+        <div id="feedback-log">
+            Bienvenido a tu oficina. ¡Acepta un contrato para empezar!
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='js/game.js') }}"></script>
+</body>
+</html>
